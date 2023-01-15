@@ -191,7 +191,7 @@ view model =
                         [ Html.text "48thFlame" ]
                     , Html.text " "
                     , Html.a
-                        [ Attributes.href "https://github.com/48thFlame/Game-hub", Attributes.class "credits_link" ]
+                        [ Attributes.href "https://github.com/48thFlame/Mastermind-Website", Attributes.class "credits_link" ]
                         [ Html.text "Repo" ]
                     ]
                 ]
@@ -325,12 +325,12 @@ generateGameHtml game currentGuess =
                 gameControlButtons : List (Html.Html Msg)
                 gameControlButtons =
                     [ Html.button
-                        [ Attributes.class "game_clear_button"
+                        [ Attributes.class "game_control_button"
                         , Events.onClick ClearBtnClick
                         ]
                         [ Html.text "Clear 🗙" ]
                     , Html.button
-                        [ Attributes.class "game_guess_button"
+                        [ Attributes.class "game_control_button"
                         , Events.onClick (GuessBtnClick NoColor)
                         ]
                         [ Html.text "Guess ➔" ]
@@ -338,14 +338,14 @@ generateGameHtml game currentGuess =
 
                 newGameButton : Html.Html Msg
                 newGameButton =
-                    Html.button [ Attributes.class "newGame_button", Events.onClick NewGame ] [ Html.text "New game 🗘" ]
+                    Html.button [ Attributes.class "game_control_button", Events.onClick NewGame ] [ Html.text "New game 🗘" ]
             in
             Html.div
                 [ Attributes.class "game_buttons" ]
                 (if playing then
                     List.concat
                         [ List.map gameGuessingButton guessingColors
-                        , List.singleton (Html.br [] [])
+                        , [ Html.br [] [], Html.br [] [] ]
                         , gameControlButtons
                         , List.singleton
                             newGameButton
@@ -357,7 +357,7 @@ generateGameHtml game currentGuess =
     in
     Html.div
         [ Attributes.class "game_section" ]
-        [ generateBoard, generateCurrentGuess currentGuess, generateGameButtons ]
+        [ generateBoard, Html.br [] [], generateCurrentGuess currentGuess, Html.br [] [], generateGameButtons ]
 
 
 colorToString : Color -> String

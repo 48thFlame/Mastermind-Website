@@ -8,3 +8,12 @@ body {
 .game_section {
     font-size: x-large;
 }
+
+.game_color_button {
+    font-size: xx-large;
+}
+
+.game_control_button {
+    height: 35px;
+    font-size: medium;
+}
