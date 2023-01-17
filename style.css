@@ -15,12 +15,14 @@ body {
     border-radius: 8px;
     margin-top: 5px;
     margin-right: 2px;
+    border-color: lightslategray;
 }
 
 .game_control_button {
     font-size: medium;
     border-radius: 15px;
     margin-top: 8px;
+    border-color: lightslategray;
 }
 
 .guess_button {
