@@ -17,6 +17,7 @@ gameLen =
 
 gameAPIUrl : String
 gameAPIUrl =
+    -- "http://35.238.73.100:8080/mastermind"
     "http://localhost:8080/mastermind"
 
 
