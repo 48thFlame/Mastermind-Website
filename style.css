@@ -9,11 +9,32 @@ body {
     font-size: x-large;
 }
 
-.game_color_button {
+.guess_color_button {
     font-size: xx-large;
+    background-color: black;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-right: 2px;
 }
 
 .game_control_button {
-    height: 35px;
     font-size: medium;
+    border-radius: 15px;
+    margin-top: 8px;
+}
+
+.guess_button {
+    background-color: lightgreen;
+    font-size: large;
+    height: 50px;
+    margin-left: 3px;
+}
+
+.clear_button {
+    background-color: indianred;
+    height: 35px;
+}
+
+.new_game_button {
+    background-color: firebrick;
 }
